@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #hsl(0, 100%, 98%);
+    color: hsl(0, 36%, 70%);
+    Font-size: 16px
+}
+
+.container {
+    max-width: 900px;
+    height: 550px;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 50px 0 0 70px;
+}
+
+.logo {
+    width: 45%;
+    height: 130px;
+    background-image: url('images/logo.svg');
+    background-repeat: no-repeat;
+}
+
+
+.left-side {
+    width: 45%;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: hsl(0, 6%, 24%);
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: hsl(0, 80%, 86%);
+    font-weight: 300;
+}
+
+form {
+    margin: 30px 0 10px 0;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    border: 2px solid hsla(0, 80%, 86%, 0.507);
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+input::placeholder {
+    color: 
+hsl(0, 80%, 86%);
+}
+
+input:focus {
+    outline: none;
+    color:  hsl(0, 6%, 24%);
+}
+
+input:invalid {
+    border-color:  hsl(0, 93%, 68%);
+    box-shadow: 1px 1px 3px hsl(0, 93%, 68%);
+}
+
+input:focus:invalid {
+
+}
+
+#error {
+    position: absolute;
+    top: 12px;
+    right: 120px;
+    display: none;
+}
+
+form button {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, hsl(0, 74%, 74%), hsl(0, 80%, 86%));
+}
+
+#error-email {
+    padding: 1rem;
+    color: hsl(0, 93%, 68%);
+}
+
+.rigth-side {
+    width: 40%;
+    background-image: url('images/hero-desktop.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.rigth-side img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        height: 100vh;
+        padding: 35px 0;
+        margin: 0;
+    }
+
+    .logo {
+        width: 100%;
+        margin-left: 35px;
+        margin-bottom: 20px;
+        height: 50px;
+    }
+
+    .flex {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .rigth-side {
+        width: 100%;
+        background-image: url('images/hero-mobile.jpg');
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .left-side {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-side h1 {
+        margin-top: 40px;
+    }
+
+    .left-side p {
+        width: 85%;
+    }
+
+    form {
+        width: 85%;
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    #email {
+        width: 100%;
+        margin: 0;
+    }
+}
